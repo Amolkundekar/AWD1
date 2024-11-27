@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* About Section */
+    .about {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* Skills Section */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .skill {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Projects Section */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: left;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .project a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 992px) {
+      .projects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skills {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        font-size: 1rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      header h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <h2>Web Developer | Designer | Creator</h2>
+  </header>
+  
+  <div class="container">
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate web developer with a knack for building beautiful and responsive websites.</p>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">MongoDB</div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>A simple website showcasing modern design principles.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>An e-commerce site with dynamic product pages.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Project 3</h3>
+        <p>A portfolio site to showcase skills and projects.</p>
+        <a href="#">View Project</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

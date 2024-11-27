@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    .container {
+      margin: 100px auto;
+      max-width: 600px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #0073e6;
+    }
+
+    #quote {
+      font-size: 1.5em;
+      margin: 20px 0;
+      color: #555;
+    }
+
+    button {
+      font-size: 1em;
+      padding: 10px 20px;
+      color: white;
+      background-color: #0073e6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Random Quote Generator</h1>
+    <p id="quote">Click the button to see a quote!</p>
+    <button id="generateQuote">Get Random Quote</button>
+  </div>
+
+  <script>
+    // Array of quotes
+    const quotes = [
+      "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+      "The way to get started is to quit talking and begin doing. - Walt Disney",
+      "Your time is limited, so don't waste it living someone else's life. - Steve Jobs",
+      "If life were predictable it would cease to be life, and be without flavor. - Eleanor Roosevelt",
+      "In the middle of every difficulty lies opportunity. - Albert Einstein",
+      "Do what you can, with what you have, where you are. - Theodore Roosevelt",
+    ];
+
+    // Select the DOM elements
+    const quoteElement = document.getElementById("quote");
+    const generateQuoteButton = document.getElementById("generateQuote");
+
+    // Add event listener to the button
+    generateQuoteButton.addEventListener("click", () => {
+      // Generate a random quote
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      const randomQuote = quotes[randomIndex];
+      
+      // Update the quote on the webpage
+      quoteElement.textContent = randomQuote;
+    });
+  </script>
+</body>
+</html>
